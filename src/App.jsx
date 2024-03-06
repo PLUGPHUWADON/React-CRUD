@@ -6,12 +6,13 @@
 // The server is running at https://node41091-noderest.proen.app.ruk-com.cloud/
 
 import BookList from './components/BookList';
+import "./App.css";
 
 
 export default function App() {
   return (
     <div>
-      <h1>CRUD Operations</h1>
+      <h1 style={{"color":"tomato"}}>CRUD Operations</h1>
       <BookList />
     </div>
   );

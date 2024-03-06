@@ -30,7 +30,7 @@ export default function BookList() {
 
   useEffect(() => {
     axios
-      .get("https://node41091-noderest.proen.app.ruk-com.cloud/books")
+      .get("https://node56991-phuwadon-noderest.proen.app.ruk-com.cloud/books")
       .then((response) => {
         setBooks(response.data);
       });
@@ -38,7 +38,7 @@ export default function BookList() {
 
   const viewBook = (id) => {
     axios
-      .get(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${id}`)
+      .get(`https://node56991-phuwadon-noderest.proen.app.ruk-com.cloud/books/${id}`)
       .then((response) => {
         setBook(response.data);
       });
@@ -57,7 +57,7 @@ export default function BookList() {
 
   const deleteBook = (id) => {
     axios
-      .delete(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${id}`)
+      .delete(`https://node56991-phuwadon-noderest.proen.app.ruk-com.cloud/books/${id}`)
       .then(() => {
         setBooks(books.filter((book) => book.id !== id));
       });
@@ -66,9 +66,9 @@ export default function BookList() {
   return (
     <div>
       <h2>Books</h2>
-      <table>
+      <table border={1} style={{"width":"100%"}}>
         <thead>
-          <tr>
+          <tr style={{"color":"#fff"}}>
             <th>Title</th>
             <th>Author</th>
             <th>Actions</th>
@@ -76,7 +76,7 @@ export default function BookList() {
         </thead>
         <tbody>
           {books.map((book) => (
-            <tr key={book.id}>
+            <tr style={{"color":"#fff"}} key={book.id}>
               <td>{book.title}</td>
               <td>{book.author}</td>
               <td>

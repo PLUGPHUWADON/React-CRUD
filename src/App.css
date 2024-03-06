@@ -1,0 +1,9 @@
+.app__styled {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: rgb(36, 34, 34);
+}
